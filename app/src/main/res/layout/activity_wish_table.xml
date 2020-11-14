@@ -23,5 +23,12 @@
             android:textSize="36sp"
             android:gravity="center"
             app:fontFamily="@font/archivo_black"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/home" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
