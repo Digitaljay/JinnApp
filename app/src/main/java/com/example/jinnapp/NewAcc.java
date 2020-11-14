@@ -35,7 +35,7 @@ public class NewAcc extends AppCompatActivity implements View.OnClickListener {
     {
         switch (view.getId())
         {
-            case R.id.submit_creating_wish:
+            case R.id.submit_creating_acc:
                 Log.d("Button","logged");
                 Intent intent = new Intent(NewAcc.this, WishTableActivity.class);
                 user=namae.getText().toString();

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         namae=(EditText)findViewById(R.id.new_title);
         psw=(EditText)findViewById(R.id.new_description);
-        submit_log =(Button)findViewById(R.id.submit_creating_wish);
+        submit_log =(Button)findViewById(R.id.submit_log);
         create_acc=(Button)findViewById(R.id.create_acc);
 
         submit_log.setOnClickListener(this);
@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        myRef1.setValue("Coffee;@jimmy_hendrix;I dreamed about coffee for so long! But I am at university right now and can't skip lesson to go and buy coffee, Can you buy it for me please?");
 //        DatabaseReference myRef2 = database.getReference("message/wishes/@minecrafter");
 //        myRef2.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
+        DatabaseReference myRef3 = database.getReference("message/profiles/@minecrafter/my_dream");
+        myRef3.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
+        DatabaseReference myRef4 = database.getReference("message/profiles/@minecrafter/taken_dream");
+        myRef4.setValue("StPetersburg;@ella;I dream so much to go there");
+
 
         // Read from the database
 
@@ -67,10 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view)
     {
+        Log.d("Button","clicked");
         switch (view.getId())
         {
-            case R.id.submit_creating_wish:
-                Log.d("Button","logged");
+            case R.id.submit_log:
+                Log.d("aliass",alias);
                 Intent intent1 = new Intent(MainActivity.this,WishTableActivity.class);
                 intent1.putExtra("alias",alias);
                 startActivity(intent1);
