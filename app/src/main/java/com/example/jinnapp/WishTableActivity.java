@@ -108,7 +108,7 @@ public class WishTableActivity extends AppCompatActivity implements ChildEventLi
         {
             case R.id.button_home:
                 Log.d("Wish","taken");
-                Intent intent1 = new Intent(WishTableActivity.this,PersonalActivity.class);
+                Intent intent1 = new Intent(WishTableActivity.this,CreateWishActivity.class);
                 intent1.putExtra("alias",alias);
                 startActivity(intent1);
                 break;

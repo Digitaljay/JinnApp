@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        myRef1.setValue("Coffee;@jimmy_hendrix;I dreamed about coffee for so long! But I am at university right now and can't skip lesson to go and buy coffee, Can you buy it for me please?");
 //        DatabaseReference myRef2 = database.getReference("message/wishes/@minecrafter");
 //        myRef2.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
-        DatabaseReference myRef3 = database.getReference("message/profiles/@minecrafter/my_dream");
-        myRef3.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
-        DatabaseReference myRef4 = database.getReference("message/profiles/@minecrafter/taken_dream");
-        myRef4.setValue("StPetersburg;@ella;I dream so much to go there");
+//        DatabaseReference myRef3 = database.getReference("message/profiles/@minecrafter/my_dream");
+//        myRef3.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
+//        DatabaseReference myRef4 = database.getReference("message/profiles/@minecrafter/taken_dream");
+//        myRef4.setValue("StPetersburg;@ella;I dream so much to go there");
 
 
         // Read from the database

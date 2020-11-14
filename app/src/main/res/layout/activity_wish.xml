@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDD9B5"
     tools:context=".WishActivity">
 
     <TextView
@@ -23,24 +24,24 @@
         android:id="@+id/namae_wish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="28dp"
         android:text="Mary"
-        android:textSize="18sp"
+        android:textSize="29sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_wish" />
 
     <TextView
         android:id="@+id/wish_wish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="359dp"
+        android:layout_height="429dp"
         android:layout_marginTop="24dp"
         android:gravity="left"
         android:paddingRight="24dp"
         android:text="I dreamed about coffee for so long! But I am at university right now and can't skip lesson to go and buy coffee, Can you buy it for me please?"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/namae_wish"
         app:layout_constraintTop_toBottomOf="@+id/namae_wish" />
 
@@ -50,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="I wanna do it!"
+        android:background="#C4C4C4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

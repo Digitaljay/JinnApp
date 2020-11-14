@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class NewAcc extends AppCompatActivity implements View.OnClickListener {
     EditText namae;
     EditText psw;
-    Button submit_log;
+    Button submit_creating_acc;
     String user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,9 @@ public class NewAcc extends AppCompatActivity implements View.OnClickListener {
 
         namae=(EditText)findViewById(R.id.new_title);
         psw=(EditText)findViewById(R.id.new_description);
-        submit_log =(Button)findViewById(R.id.submit_creating_wish);
+        submit_creating_acc=(Button)findViewById(R.id.submit_creating_acc);
 
-        submit_log.setOnClickListener(this);
+        submit_creating_acc.setOnClickListener(this);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
     }

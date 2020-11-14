@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDD9B5"
     tools:context=".PersonalActivity">
 
     <TextView
@@ -28,6 +29,7 @@
         android:layout_marginTop="32dp"
         android:text="Taken dreams"
         android:textSize="24sp"
+        android:background="#FFFFFF"
         app:fontFamily="@font/archivo_black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alias_profile" />
@@ -41,6 +43,7 @@
         android:layout_marginTop="150dp"
         android:text="Your dreams"
         android:textSize="24sp"
+        android:background="#FFFFFF"
         app:fontFamily="@font/archivo_black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_personal" />
@@ -53,6 +56,7 @@
         android:gravity="left"
         android:paddingRight="24dp"
         android:text="sth"
+        android:background="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/my_personal"
         app:layout_constraintTop_toBottomOf="@+id/my_personal" />
@@ -66,6 +70,7 @@
         android:paddingRight="24dp"
         android:text="sth"
         android:textSize="18sp"
+        android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="@+id/taken_personal"
         app:layout_constraintTop_toBottomOf="@+id/taken_personal" />
 
