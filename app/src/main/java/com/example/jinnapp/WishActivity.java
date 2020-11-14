@@ -10,12 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class WishActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView title_wish;
     TextView namae_wish;
     TextView wish_wish;
-    TextView alias_wish;
     Button submit_done;
 
     @Override
@@ -30,11 +32,10 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         String title = intent.getStringExtra("title");
         String namae = intent.getStringExtra("namae");
         String wish = intent.getStringExtra("wish");
-        String alias = intent.getStringExtra("alias");
+        Log.d("Wish","got data");
         title_wish.setText(title);
         namae_wish.setText(namae);
         wish_wish.setText(wish);
-        alias_wish.setText("tg "+alias);
         submit_done.setOnClickListener(this);
     }
 
@@ -42,9 +43,15 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view){
         switch (view.getId())
         {
-            case R.id.submit_log:
+            case R.id.submit_done:
                 Log.d("Wish","taken");
-                Intent intent1 = new Intent(WishActivity.this,MapActivity.class);
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                // Write a message to the database
+                String name = namae_wish.getText().toString();
+                DatabaseReference myRef = database.getReference("message/"+name);
+                myRef.setValue("");
+                Intent intent1 = new Intent(WishActivity.this,WishTableActivity.class);
                 Toast.makeText(this, "Great! You gonna make this person happy!", Toast.LENGTH_SHORT).show();
                 startActivity(intent1);
                 break;

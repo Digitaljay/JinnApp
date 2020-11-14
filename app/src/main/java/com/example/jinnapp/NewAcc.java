@@ -11,9 +11,6 @@ import android.widget.EditText;
 
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.time.Instant;
-import java.util.Map;
-
 public class NewAcc extends AppCompatActivity implements View.OnClickListener {
     EditText namae;
     EditText psw;
@@ -24,9 +21,9 @@ public class NewAcc extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_acc);
 
-        namae=(EditText)findViewById(R.id.namae);
-        psw=(EditText)findViewById(R.id.psw);
-        submit_log =(Button)findViewById(R.id.submit_log);
+        namae=(EditText)findViewById(R.id.new_title);
+        psw=(EditText)findViewById(R.id.new_description);
+        submit_log =(Button)findViewById(R.id.submit_creating_wish);
 
         submit_log.setOnClickListener(this);
 
@@ -38,7 +35,7 @@ public class NewAcc extends AppCompatActivity implements View.OnClickListener {
     {
         switch (view.getId())
         {
-            case R.id.submit_log:
+            case R.id.submit_creating_wish:
                 Log.d("Button","logged");
                 Intent intent = new Intent(NewAcc.this, WishTableActivity.class);
                 user=namae.getText().toString();

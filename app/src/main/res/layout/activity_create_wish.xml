@@ -6,4 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".CreateWishActivity">
 
+    <EditText
+        android:id="@+id/new_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namae_wish" />
+
+    <TextView
+        android:id="@+id/title_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="Create your new wish:"
+        android:textSize="36sp"
+        app:fontFamily="@font/archivo_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/new_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wish_wish" />
+
+    <TextView
+        android:id="@+id/namae_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Title of your wish"
+        app:layout_constraintStart_toStartOf="@+id/new_title"
+        app:layout_constraintTop_toBottomOf="@+id/title_wish" />
+
+    <TextView
+        android:id="@+id/wish_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Description of your wish"
+        app:layout_constraintStart_toStartOf="@+id/new_description"
+        app:layout_constraintTop_toBottomOf="@+id/new_title" />
+
+    <Button
+        android:id="@+id/submit_creating_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_description" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

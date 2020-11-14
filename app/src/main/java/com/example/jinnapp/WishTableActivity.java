@@ -43,40 +43,43 @@ public class WishTableActivity extends AppCompatActivity implements ChildEventLi
     public void onChildAdded(DataSnapshot dataSnapshot, String prevChildKey) {
         Log.d("Table","Found child");
         String user_dat = dataSnapshot.getValue(String.class);
-        String[] data = user_dat.split(";");
+        if (!user_dat.equals("")) {
+            String[] data = user_dat.split(";");
 
-        Log.d("BD_namae", data[1]);
-        Log.d("BD_wish", data[2]);
+            Log.d("BD_namae", data[1]);
+            Log.d("BD_wish", data[2]);
 
-        String title = data[0];
-        states.put(countID,user_dat);
-        Button b = new Button(getApplicationContext());
-        b.setText(title);
-        b.setLayoutParams(
-                new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT)
-        );
-        b.setId(countID);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("Table","Wish clicked");
-                Intent intent3 = new Intent(WishTableActivity.this, WishActivity.class);
-                Log.d("Table","id"+v.getId()+" ");
-                Log.d("Table",states.get(v.getId()).toString());
-                String[] some_data = states.get(v.getId()).split(";");
+            String title = data[0];
+            states.put(countID, user_dat);
+            Button b = new Button(getApplicationContext());
+            b.setText(title);
+            b.setLayoutParams(
+                    new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT)
+            );
+            b.setId(countID);
+            b.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("Table", "Wish clicked");
+                    Intent intent3 = new Intent(WishTableActivity.this, WishActivity.class);
+                    Log.d("Table", "id" + v.getId() + " ");
+                    Log.d("Table", states.get(v.getId()).toString());
+                    String[] some_data = states.get(v.getId()).split(";");
 
-                intent3.putExtra("title",some_data[0]);
-                intent3.putExtra("namae",some_data[1]);
-                intent3.putExtra("wish",some_data[2]);
-                intent3.putExtra("alias",some_data[3]);
-                startActivity(intent3);
-            }
-        });
-        linearLayout.addView(b);
-        Log.d("Map","button created");
-        countID++;
+                    intent3.putExtra("title", some_data[0]);
+                    intent3.putExtra("namae", some_data[1]);
+                    intent3.putExtra("wish", some_data[2]);
+                    Log.d("Table", "readed");
+                    startActivity(intent3);
+
+                }
+            });
+            linearLayout.addView(b);
+            Log.d("Map", "button created");
+            countID++;
+        }
     }
 
     @Override

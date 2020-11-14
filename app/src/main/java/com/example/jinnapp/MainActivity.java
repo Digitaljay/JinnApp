@@ -9,11 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,9 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        namae=(EditText)findViewById(R.id.namae);
-        psw=(EditText)findViewById(R.id.psw);
-        submit_log =(Button)findViewById(R.id.submit_log);
+        namae=(EditText)findViewById(R.id.new_title);
+        psw=(EditText)findViewById(R.id.new_description);
+        submit_log =(Button)findViewById(R.id.submit_creating_wish);
         create_acc=(Button)findViewById(R.id.create_acc);
 
         submit_log.setOnClickListener(this);
@@ -66,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         switch (view.getId())
         {
-            case R.id.submit_log:
+            case R.id.submit_creating_wish:
                 Log.d("Button","logged");
                 Intent intent1 = new Intent(MainActivity.this,WishTableActivity.class);
                 startActivity(intent1);

@@ -7,7 +7,7 @@
     tools:context=".NewAcc">
 
     <EditText
-        android:id="@+id/namae"
+        android:id="@+id/new_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/psw"
+        android:id="@+id/new_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -46,8 +46,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Your name"
-        app:layout_constraintStart_toStartOf="@+id/namae"
+        android:text="Your tg alias without @"
+        app:layout_constraintStart_toStartOf="@+id/new_title"
         app:layout_constraintTop_toBottomOf="@+id/title_wish" />
 
     <TextView
@@ -56,17 +56,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Your password"
-        app:layout_constraintStart_toStartOf="@+id/psw"
-        app:layout_constraintTop_toBottomOf="@+id/namae" />
+        app:layout_constraintStart_toStartOf="@+id/new_description"
+        app:layout_constraintTop_toBottomOf="@+id/new_title" />
 
     <Button
-        android:id="@+id/submit_log"
+        android:id="@+id/submit_creating_wish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="create the account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psw" />
+        app:layout_constraintTop_toBottomOf="@+id/new_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
