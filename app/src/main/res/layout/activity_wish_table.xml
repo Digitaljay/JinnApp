@@ -5,30 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WishTableActivity">
-
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="39dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/title_table_wish"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="425dp"
+            android:layout_marginBottom="64dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/title_table_wish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="24dp"
+                android:text="Wishes waiting for you:"
+                android:textSize="36sp"
+                app:fontFamily="@font/archivo_black" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wishes waiting for you:"
-            android:paddingBottom="24dp"
-            android:textSize="36sp"
-            android:gravity="center"
-            app:fontFamily="@font/archivo_black"/>
+            android:text="Go home" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@drawable/home" />
     </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,7 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 // Write a message to the database
                 String name = namae_wish.getText().toString();
-                DatabaseReference myRef = database.getReference("message/"+name);
+                DatabaseReference myRef = database.getReference("message/wishes/"+name);
                 myRef.setValue("");
                 Intent intent1 = new Intent(WishActivity.this,WishTableActivity.class);
                 Toast.makeText(this, "Great! You gonna make this person happy!", Toast.LENGTH_SHORT).show();

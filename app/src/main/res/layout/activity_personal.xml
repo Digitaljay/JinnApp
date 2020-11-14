@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="150dp"
         android:text="Your dreams"
         android:textSize="24sp"
         app:fontFamily="@font/archivo_black"
@@ -46,10 +46,27 @@
         app:layout_constraintTop_toBottomOf="@+id/my_personal" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/my_dreams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="251dp" />
+        android:layout_marginTop="24dp"
+        android:gravity="left"
+        android:paddingRight="24dp"
+        android:text="sth"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/my_personal"
+        app:layout_constraintTop_toBottomOf="@+id/my_personal" />
+
+    <TextView
+        android:id="@+id/taken_dreams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="left"
+        android:paddingRight="24dp"
+        android:text="sth"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/taken_personal"
+        app:layout_constraintTop_toBottomOf="@+id/taken_personal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

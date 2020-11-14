@@ -19,23 +19,27 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
-public class WishTableActivity extends AppCompatActivity implements ChildEventListener{
+public class WishTableActivity extends AppCompatActivity implements ChildEventListener, View.OnClickListener {
     int countID=0;
     Map<Integer, String> states = new HashMap<Integer, String>();
     LinearLayout linearLayout;
+    Button button_home;
+    String alias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wish_table);
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
-
+        button_home =(Button)findViewById(R.id.button_home);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-
+        Intent intent = getIntent();
+        alias=intent.getStringExtra("alias");
         // Write a message to the database
-        DatabaseReference myRef = database.getReference("message");
+        DatabaseReference myRef = database.getReference("message/wishes");
         myRef.addChildEventListener(this);
         Log.d("Table","created");
+        button_home.setOnClickListener(this);
 
     }
 
@@ -98,16 +102,16 @@ public class WishTableActivity extends AppCompatActivity implements ChildEventLi
     public void onCancelled(DatabaseError databaseError) {
     }
 
-//    @Override
-//    public void onClick(View view){
-//        switch (view.getId())
-//        {
-//            case R.id.submit_log:
-//                Log.d("Wish","taken");
-//                Intent intent1 = new Intent(WishTableActivity.this,WishActivity.class);
-//                Toast.makeText(this, "Great! You gonna make this person happy!", Toast.LENGTH_SHORT).show();
-//                startActivity(intent1);
-//                break;
-//        }
-//    }
+    @Override
+    public void onClick(View view){
+        switch (view.getId())
+        {
+            case R.id.button_home:
+                Log.d("Wish","taken");
+                Intent intent1 = new Intent(WishTableActivity.this,PersonalActivity.class);
+                intent1.putExtra("alias",alias);
+                startActivity(intent1);
+                break;
+        }
+    }
 }

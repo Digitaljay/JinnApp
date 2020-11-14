@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText psw;
     Button submit_log;
     Button create_acc;
+    String alias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         submit_log.setOnClickListener(this);
         create_acc.setOnClickListener(this);
 
+        alias=namae.getText().toString();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         // Write a message to the database
-        DatabaseReference myRef = database.getReference("message/stuff");
+//        DatabaseReference myRef = database.getReference("message/wishes/@ella");
+//        myRef.setValue("StPetersburg;@ella;I dream so much to go there");
+//        DatabaseReference myRef1 = database.getReference("message/wishes/@jimmy_hendrix");
+//        myRef1.setValue("Coffee;@jimmy_hendrix;I dreamed about coffee for so long! But I am at university right now and can't skip lesson to go and buy coffee, Can you buy it for me please?");
+//        DatabaseReference myRef2 = database.getReference("message/wishes/@minecrafter");
+//        myRef2.setValue("Minecraft;@minecrafter;I wanna many diamonds, do you have one?");
 
-//        myRef.setValue("Hello, World!");
         // Read from the database
 
         // Read from the database
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.submit_creating_wish:
                 Log.d("Button","logged");
                 Intent intent1 = new Intent(MainActivity.this,WishTableActivity.class);
+                intent1.putExtra("alias",alias);
                 startActivity(intent1);
                 break;
             case R.id.create_acc:
